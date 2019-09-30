@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 /*
@@ -14,19 +14,7 @@ import Img from "gatsby-image"
  */
 
 const BabyImg = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "baby-nippet.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
+  <StaticQuery render={data => <Img src="https://source.unsplash.com/random/600x400" alt="rdmPic" />} />
 )
+
 export default BabyImg

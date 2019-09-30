@@ -14,19 +14,7 @@ import Img from "gatsby-image"
  */
 
 const JunkratImg = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "junkrat.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+  <StaticQuery render={data => <Img src="https://source.unsplash.com/random/600x400" alt="rdmPic" />}
   />
 )
 export default JunkratImg

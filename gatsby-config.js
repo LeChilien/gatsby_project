@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My first gatsby project`,
+    title: `Gatsby Template`,
     description: `Gatsby stater pack`,
     author: `@Josey`,
   },
